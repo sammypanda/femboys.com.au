@@ -33,14 +33,11 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ${{steps.configure.outputs.base_path}}
+          path: _site
 
       - name: Configure GitHub Pages
         id: configure
         uses: actions/configure-pages@v3
-        outputs:
-          base_url: https://sammypanda.github.io/femboys.com.au
-          base_path: /_site 
 
       - name: Deploy to GitHub Pages
         id: deployment
