@@ -1,7 +1,7 @@
 name: Deploy
 on:
   push:
-    branches: dev/github-actions
+    branches: main
 
 jobs:
   deploy:
