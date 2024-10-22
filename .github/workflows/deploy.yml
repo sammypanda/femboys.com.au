@@ -1,0 +1,48 @@
+name: Deploy
+on:
+  push:
+    branches: main
+
+jobs:
+  deploy:
+    name: Deploy
+
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read # get the repository content
+      pages: write # write to GitHub pages
+      id-token: write # github token
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.0
+
+      - name: Generate site
+        run: "deno task build"
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ${{steps.configure.outputs.base_path}}
+
+      - name: Configure GitHub Pages
+        id: configure
+        uses: actions/configure-pages@v3
+        outputs:
+          base_url: https://sammypanda.github.io/femboys.com.au
+          base_path: /_site 
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+  
