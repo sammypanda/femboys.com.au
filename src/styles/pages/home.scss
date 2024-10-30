@@ -3,8 +3,7 @@ body {
     flex-direction: column;
     background-color: var(--background);
     min-height: 100vh;
-    height: 100vh;
-    align-items: stretch;
+    justify-content: space-between;
 }
 
 .starry-hero {
@@ -13,9 +12,19 @@ body {
     height: 60vh;
 }
 
-.earth-cap {
-    background-color: var(--base);
+.earth-body {
+    background-color: var(--background);
     height: 20vh;
-    border-color: #000 transparent transparent transparent;
-    border-radius: 80%/200px 200px 0 0;
+
+    .earth-cap {
+        background-color: var(--base);
+        height: 20vh;
+        border-color: #000 transparent transparent transparent;
+        border-radius: 80%/200px 200px 0 0;
+    }
+
+    .earth-inner {
+        background-color: var(--base);
+        height: 100px;
+    }
 }
