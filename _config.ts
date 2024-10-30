@@ -13,4 +13,6 @@ site.use(robots());
 site.use(sass());
 site.use(sitemap());
 
+site.copy("img");
+
 export default site;

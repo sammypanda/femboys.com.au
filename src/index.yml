@@ -1,4 +1,9 @@
 layout: layouts/home.vto
 title: Femboys Australia
-content: |
-    Example content.
+logo: /img/logo.png
+
+# quicks are small buttons that link to external things
+quicks:
+    - label: Instagram
+      icon: /img/icon/instagram.svg
+      url: https://instagram.com/femboys_australia
