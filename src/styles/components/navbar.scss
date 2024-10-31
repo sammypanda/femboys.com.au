@@ -1,8 +1,7 @@
 .navbar {
     display: flex;
-    height: 150px;
-}
-
-.navbar-logo {
+    justify-content: space-between;
+    height: auto;
     margin: 20px;
 }
+
