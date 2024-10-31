@@ -11,13 +11,7 @@
         <div class="quicks">
             {{ for quick of quicks }}
             <a href="{{quick.url}}">
-                <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 32 32" 
-                    width="32px" 
-                    height="32px">
-                    {{ quick.icon }}
-                </svg>
+                <img src="{{ quick.icon }}" inline/>
             </a>
             {{ /for }}
         </div>
