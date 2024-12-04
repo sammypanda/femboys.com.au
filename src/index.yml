@@ -1,6 +1,7 @@
 layout: layouts/home.vto
 title: Femboys Australia
 logo: /img/logo.png
+curve: /img/background/planet.svg
 
 # quicks are small buttons that link to external things
 quicks:

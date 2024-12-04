@@ -12,19 +12,45 @@ body {
     height: 60vh;
 }
 
-.earth-body {
+.curve-body {
     background-color: var(--background);
     height: 20vh;
+}
 
-    .earth-cap {
-        background-color: var(--base);
-        height: 20vh;
-        border-color: #000 transparent transparent transparent;
-        border-radius: 80%/200px 200px 0 0;
+.curve-cap {
+    background-color: var(--base);
+    height: 20vh;  /* Container height */
+    width: 100%;   /* Full width of the parent container */
+    border-color: #000 transparent transparent transparent;
+    border-radius: 80%/200px 200px 0 0;
+    overflow: hidden;
+    display: flex; /* Make sure both SVGs are side by side */
+    position: relative; /* Position relative to allow absolute positioning for the duplicate */
+    
+    svg {
+        width: 100%; /* Ensure SVG takes full width of the container */
+        // height: 100%; /* Ensure SVG takes full height of the container */
+        object-fit: cover; /* Ensure the SVG scales properly without distorting */
+        animation: scroll 120s linear infinite; /* Adjust the speed of the scroll */
+        transform-origin: center center; /* Keep the transform around the center */
+        position: absolute;
     }
 
-    .earth-inner {
-        background-color: var(--base);
-        height: 100px;
+    .curve-duplicate {
+        left: 100%; /* Start the duplicate right after the first SVG */
     }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start from the initial position */
+    }
+    100% {
+        transform: translateX(-100%); /* Move completely off screen */
+    }
+}
+
+.curve-inner {
+    background-color: var(--base);
+    height: 100px;
 }
