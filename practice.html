@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>practice</title>
+</head>
+
+<script>
+    console.log(document.scrollingElement);
+
+    document.addEventListener("scroll", (s) => {
+        console.log("?");
+        console.log(scrollY);
+
+        startFactor = 10; // when in the scroll to start the stuff 
+        speedFactor = 0.3; // as a percentage
+
+        if (scrollY > startFactor) {
+            opacity = 100 - (scrollY * speedFactor) + startFactor + "%";
+            opacityInverted = 0 + (scrollY * speedFactor) - (startFactor + 20) + "%";
+            document.getElementsByClassName("disappear")[0].setAttribute("style", "opacity: " + opacity);
+            document.getElementsByClassName("appear")[0].setAttribute("style", "opacity: " + opacityInverted);
+        }
+    })
+</script>
+
+<style>
+body,html {
+    margin: 0;
+}
+
+.head {
+    display: flex;
+    height: 90vh;
+    background-color: red;
+}
+
+.magic {
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+}
+
+.disappear {
+    margin: 20px;
+    background-color: blue;
+    width: 80%;
+    height: 10%;
+}
+
+.appear {
+    opacity: 0%;
+}
+</style>
+
+<body>
+    <div class="head">
+
+    </div>
+
+    <div class="magic">
+        <div class="disappear">
+
+        </div>
+
+        <div class="appear">
+            <p>rawr</p>
+        </div>
+    </div>
+</body>
