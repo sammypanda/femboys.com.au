@@ -19,14 +19,14 @@ body {
 
 .curve-cap {
     background-color: var(--base);
-    height: 20vh;  /* Container height */
-    width: 100%;   /* Full width of the parent container */
+    height: 20vh; /* Container height */
+    width: 100%; /* Full width of the parent container */
     border-color: #000 transparent transparent transparent;
     border-radius: 80%/200px 200px 0 0;
     overflow: hidden;
     display: flex; /* Make sure both SVGs are side by side */
     position: relative; /* Position relative to allow absolute positioning for the duplicate */
-    
+
     svg {
         width: 100%; /* Ensure SVG takes full width of the container */
         // height: 100%; /* Ensure SVG takes full height of the container */
@@ -52,5 +52,5 @@ body {
 
 .curve-inner {
     background-color: var(--base);
-    height: 100px;
+    /* height: 100px; */
 }
