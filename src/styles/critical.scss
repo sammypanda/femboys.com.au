@@ -2,15 +2,15 @@
 
 /* Variables */
 :root {
-    --background: #ED82C6;
-    --foreground: #DCA7D8;
-    --accent: #99B9FF;
-    --base: #F7F9F2;
-    --secondary: #0F3143;
+    --background: #ed82c6;
+    --foreground: #dca7d8;
+    --accent: #99b9ff;
+    --base: #f7f9f2;
+    --secondary: #0f3143;
     --text: #525252;
 }
 
-#logo {
-    height: 100px;
-    width: auto;
+@font-face {
+    font-family: "Bitween10";
+    src: url("../font/BITWA.TTF") format("truetype");
 }

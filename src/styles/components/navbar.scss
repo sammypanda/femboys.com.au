@@ -5,9 +5,31 @@
     margin: 20px;
 }
 
+.navbar-logo {
+    all: unset;
+}
+
 .quicks {
     display: flex;
     align-items: center;
     stroke: var(--base);
     fill: var(--base);
+}
+
+#logo {
+    height: 100px;
+    width: auto;
+}
+
+#text-logo {
+    font-family: Bitween10;
+    width: 50px;
+    color: var(--base);
+    background-color: var(--accent);
+    padding: 10px 10px 8px 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 50px;
+    display: flex;
 }

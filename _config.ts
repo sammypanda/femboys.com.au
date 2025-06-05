@@ -7,8 +7,11 @@ import inline from "lume/plugins/inline.ts";
 
 // create the lume instance
 const site = lume({
-    src: "./src" // set the website source directory
+  src: "./src", // set the website source directory
 });
+
+// use fonts
+site.copy("font");
 
 // CSS with extra stuff :D
 site.use(sass());

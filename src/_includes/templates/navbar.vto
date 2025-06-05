@@ -5,7 +5,11 @@
 <nav class="navbar-container">
     <div class="navbar">
         <a href="/" class="navbar-logo" aria-label="Return home!">
+            {{ if isLogo }}
             <img src="{{ logo }}" alt="Femboys Australia logo" id="logo"/>
+            {{ else }}
+            <span id="text-logo">Femboys Australia</span>
+            {{ /if }}
         </a>
 
         <div class="quicks">
