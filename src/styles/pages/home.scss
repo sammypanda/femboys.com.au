@@ -28,7 +28,7 @@ body {
     position: relative; /* Position relative to allow absolute positioning for the duplicate */
 
     svg {
-        width: 100%; /* Ensure SVG takes full width of the container */
+        width: 101%; /* Ensure SVG takes full width of the container */
         // height: 100%; /* Ensure SVG takes full height of the container */
         object-fit: cover; /* Ensure the SVG scales properly without distorting */
         animation: scroll 120s linear infinite; /* Adjust the speed of the scroll */
